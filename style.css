@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    background: #5A3F37;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C7744, #5A3F37);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
+}
+
+.contentbox {
+    flex-basis: 30%;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.4em;
+}
+
+.gallery {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Creates 3 equal columns */
+    grid-auto-rows: 150px;
+    /* Sets a consistent row height */
+    justify-content: start;
+    /* Aligns grid to the left */
+    gap: 3px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.box {
+    background-size: cover;
+    background-position: top;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: luminosity;
+    transition: all 1.5s ease-in-out;
+}
+
+#heading {
+    font-size: 3em;
+    color: #f8f8f8;
+    text-align: center;
+    text-shadow: 0 0 2px #222;
+
+}
+
+#subheading {
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #b5bac4;
+    text-align: center;
+    text-shadow: 0 0 3px #222;
+}
+
+.row-2 {
+    grid-row: span 2;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.box:hover {
+    background-position: center;
+    background-color: #f8f8f8;
+    background-blend-mode: normal;
+    box-shadow: 0 0 whitesmoke;
+    cursor: pointer;
+    color: black;
+    font-size: large;
+    text-decoration: double;
+}
+
+@media (max-width: 670px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
